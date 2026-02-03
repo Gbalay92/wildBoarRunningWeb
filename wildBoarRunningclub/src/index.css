@@ -41,7 +41,8 @@ header {
   color: var(--text-primary);
   display: flex;
   align-items: center;
-  padding: 0 2rem;
+  padding: 0 0 0 0.5rem;
+  overflow: hidden;
   justify-content: space-between;
 
   h1 {
@@ -73,6 +74,7 @@ nav {
   gap: 1rem;
   display: flex;
   font-size: 1.5rem;
+  margin-right: 0.5rem;
   a {
     text-decoration: none;
     color: var(--text-secondary);
@@ -87,7 +89,7 @@ nav {
 }
 
 /*  MÓVILES */
-@media (max-width: 48rem) {
+@media (max-width: 600px) {
   .header {
     justify-content: flex-start;
   }
@@ -97,6 +99,22 @@ nav {
 
     & h1 {
       text-align: left;
+    }
+  }
+
+  nav{
+    justify-content: flex-end;
+    font-size: 1.2rem;
+  }
+  
+  .header-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    left: 0;
+
+    h1 {
+      font-size: 1.5rem;
     }
   }
 

@@ -5,7 +5,7 @@ export function RunnerCard({ position, runner }) {
         <article className={styles.runnerCard}>
             <h3>{position}</h3>
             <h2>{runner.name}</h2>
-            <p>Tiempo: {runner.marca}</p>
+            <p> {runner.marca}</p>
         </article>
     )
 }
