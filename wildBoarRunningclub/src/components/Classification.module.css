@@ -5,3 +5,13 @@
     align-items: center;
     gap: 1rem;
 }
+
+@media (max-width: 600px) {
+    .classificationList {
+        gap: 0.5rem;
+    }
+
+    .classificationTitle {
+        font-size: 1.2rem;
+    }
+}

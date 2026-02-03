@@ -5,7 +5,7 @@ export function Classification({ runners}) {
     
     return (
         <>
-            <h2>Clasificación</h2>
+            <h2 className={styles.classificationTitle}>Clasificación</h2>
             <div className={styles.classificationList}>
                 {
                 runners.length === 0 && <p>No se encontraron corredores.</p>
