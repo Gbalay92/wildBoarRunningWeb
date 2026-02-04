@@ -9,8 +9,11 @@ const distancesGid = {'42k': 918727064
 export function useList(initialList) {
     const [distance, setDistance] = useState('42k')
     const [list, setList] = useState(initialList)
+    const [loading, setLoading] = useState(false)
     
     useEffect(() => {
+        setLoading(true);
+        setList([]);
         fetch(`https://docs.google.com/spreadsheets/d/1ja42Jlq3g-yBurBm6KUWmZ6Y9c2mJugOu7Q-Llxnks4/export?format=csv&gid=${distancesGid[distance]}`)
             .then(response => response.text())
             .then(csvData => {
@@ -26,8 +29,9 @@ export function useList(initialList) {
                 }
                 }); 
             })
+            .finally(() => setLoading(false));
     }, [distance])
     
 
-    return { list, setList, distance, setDistance }
+    return { list, setList, distance, setDistance, loading }
 }

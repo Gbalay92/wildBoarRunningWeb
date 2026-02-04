@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 
 export function Classification() {
     
-      const { list: runnersList, setList: setRunnersList, distance, setDistance } = useList([]);
+      const { list: runnersList, setList: setRunnersList, distance, setDistance, loading } = useList([]);
       const { urlDistance } = useParams();
     
       useEffect(() => {
@@ -32,9 +32,13 @@ export function Classification() {
         <>
             <h2 className={styles.classificationTitle}>Clasificación</h2>
             <div className={styles.classificationList}>
-                {
-                runnersList.length === 0 && <p>No se encontraron corredores.</p>
-                }
+                
+                {loading && <p>Cargando Jabalís...</p>}
+                
+                {!loading && runnersList.length === 0 && (
+                <p>No se encontraron Jabalís.</p>
+                )}
+
                 {runnersList.map(runner => {
                     const position = runnersList.indexOf(runner) + 1;
                     return <RunnerCard position={position} key={runner.name} runner={runner} />
