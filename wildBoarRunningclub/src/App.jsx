@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import './App.css'
 import { Header } from './components/Header'
 import { Classification } from './components/Classification'
 import runners from './data-example.json'
