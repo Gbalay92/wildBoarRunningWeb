@@ -30,7 +30,7 @@ export function useList(initialList) {
                 }); 
             })
             .finally(() => setLoading(false));
-    }, [distance])
+    },[distance])
     
 
     return { list, setList, distance, setDistance, loading }
