@@ -8,6 +8,7 @@
   background-color: #242424;
 
   --background: #2c2d2e;
+  --background-light: #3a3a3a;
   --primary: #333;
   --text-primary: rgb(179, 72, 11);
   --border: rgb(179, 72, 11);
@@ -75,12 +76,17 @@ nav {
   display: flex;
   font-size: 1.5rem;
   margin-right: 0.5rem;
+  padding: 0.5rem;
+  justify-content: center;
+  gap: 2rem;
   a {
     text-decoration: none;
-    color: var(--text-secondary);
+    color: var(--text-primary);
     transition: color 0.2s;
     font-weight: 500;
-    padding: 0.5rem;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    border-radius: 3rem;
+    background-color: var(--background-light);
     &:hover, &:focus {
       color: white;
       outline: none;

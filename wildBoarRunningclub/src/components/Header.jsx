@@ -1,4 +1,3 @@
-import { Link } from "./Link"
 import { useAuth } from "../context/AuthContext";
 import styles from "./Header.module.css"
 
