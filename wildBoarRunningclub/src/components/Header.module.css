@@ -1,0 +1,44 @@
+
+.btnUser {
+  background-color: var(--input-bg);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 4px var(--shadow);
+  outline: none;
+  background-clip: padding-box;
+}
+
+.btnUser:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-light);
+  transform: translateY(-1px);
+  background-color: rgb(179, 72, 11);
+}
+
+.iconUser {
+  width: 24px;
+  height: 24px;
+  stroke: var(--text-secondary);
+  transition: stroke 0.2s ease;
+  stroke: var(--text-primary);
+}
+
+.btnUser:hover .iconUser {
+  stroke: var(--primary);
+}
+
+.btnUser:active {
+  background-color: var(--primary-dark);
+  transform: translateY(0);
+}
+
+.btnUser:focus-visible {
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 3px var(--hsla-example);
+}
